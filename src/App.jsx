@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       <DigiLayoutContainer afVerticalPadding>
-        <h2>Rubrik</h2>
+        <h2>hej!</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna
           neque, interdum vel massa eget, condimentum rutrum velit. Sed vitae
