@@ -1,34 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import {
+  ButtonSize,
+  ButtonVariation, LoaderSpinnerSize
+} from "@digi/arbetsformedlingen";
+import {
+  DigiButton, DigiFormCheckbox, DigiFormFilter, DigiLayoutContainer,
+  DigiLoaderSpinner
+} from "@digi/arbetsformedlingen-react";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      <DigiLayoutContainer afVerticalPadding>
+        <h2>Rubrik</h2>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna
+          neque, interdum vel massa eget, condimentum rutrum velit. Sed vitae
+          ullamcorper sem. Aliquam malesuada nunc sed purus mollis scelerisque.
+          Curabitur bibendum leo quis ante porttitor tincidunt. nibh.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <DigiButton
+          className="button1"
+          afSize={ButtonSize.MEDIUM}
+          afVariation={ButtonVariation.SECONDARY}
+          afFullWidth={false}
+        >
+          Laddar...
+          <DigiLoaderSpinner
+            afSize={LoaderSpinnerSize.SMALL}
+          ></DigiLoaderSpinner>
+        </DigiButton>
+        <DigiFormFilter
+	      afFilterButtonText="Ramverk:"
+	      afSubmitButtonText="Filtrera">
+	      <DigiFormCheckbox afLabel="Val 1"/>
+	      <DigiFormCheckbox afLabel="Val 2"/>
+	      <DigiFormCheckbox afLabel="Val 3"/>
+        </DigiFormFilter>
+      </DigiLayoutContainer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
