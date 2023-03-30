@@ -42,12 +42,23 @@ html {
   }
 
 body {
-  background-color: #F4F4F4;
+  background-color: #fafafa;
   font-family: 'Open sans';
 }
 .button1 {
   display: inline-block;
 }
+
+h1 {
+  color: var(--digi--color--text--inverted);
+}
+p {
+  color: var(--digi--color--text--inverted);
+}
+.bold {
+  font-weight: 600;
+}
+
 
 .app {
   
@@ -64,8 +75,30 @@ body {
 .white {
   background-color: #F4F4F4;
 }
+.one {
+  display: flex;
+  width:100%;
+  color: #F4F4F4;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.knapp {
+  margin-right: 1rem;
+}
+
+.buttongroup {
+  padding-bottom:  1rem;
+  
+}
 
 
+@media screen and (max-width: 770px) {
+  .one {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-
-
+  }
+}
