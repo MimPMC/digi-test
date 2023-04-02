@@ -4,9 +4,9 @@ import { defineConfig } from 'vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: {
-    mimeTypes: {
-      'text/javascript': ['js'],
-    },
-  },
+  // server: {
+  //   mimeTypes: {
+  //     'text/javascript': ['js'],
+  //   },
+  // },
 })
